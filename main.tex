@@ -1,0 +1,43 @@
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+
+% Package to create a symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+% Package to use the H option 
+\usepackage{float} 
+
+% Package to use the \lipsum command
+\usepackage{lipsum} 
+
+% Package to use the \algorithm command
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+\begin{document}
+
+%
+
+\input{sections/title.tex}
+%
+\input{sections/abstract.tex}
+%
+\input{sections/introduction.tex}
+
+\input{sections/contents.tex}
+
+% It contains an example of using table and figure, 
+% you can remove it if you don't need it
+\input{sections/example.tex}
+
+
+% If you want to add some references, you can use the following snippet:
+\bibliographystyle{splncs04}
+\bibliography{references}
+\end{document}
