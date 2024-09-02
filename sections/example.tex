@@ -1,10 +1,7 @@
-% Just add [H] after \begin{table} or \begin{figure} 
-% It will place it exactly where you want it to be. 
-
 \section{Example}
 
 Example of using table 
-\begin{table}[H]
+\begin{table}[htbp]
     \caption{Table captions should be placed above the
     tables.}\label{tab1}
     \begin{tabular}{|l|l|l|}
@@ -19,15 +16,57 @@ Example of using table
     \hline
     \end{tabular}
 \end{table} 
+\FloatBarrier
+
+\begin{table}[htbp]
+    \caption{Comparison between old and new Robot.}\label{tab2}
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \rowcolor[HTML]{C0C0C0}
+    \textbf{Parameter} &  \textbf{Old Robot} & \textbf{New Robot} \\
+    \hline
+        Dimension & 52x52x80 cm & 50x50x80 cm \\
+        \hline
+        Weight & 40 kg & 38 kg \\
+        \hline
+        Robot's Speed & 2.2 m/s & 3 m/s \\
+        \hline
+        Kicking Speed & 6 m/s & 10 m/s \\
+        \hline
+        Dribble's Speed & 1.8 m/s & 2.5 m/s \\
+        \hline
+        Camera & Omnidirectional Camera & Omnidirectional Camera, Depth Camera \\ 
+        & & and Thermal Camera \\
+        \hline
+        MCU & Mini PC and STM32 & PLC, Mini PC, and STM32 \\
+        \hline
+        Supply & 36 Vdc Li-Ion Battery & 2 x 9 Ah Cordless Battery 20 VDC \\
+    \hline
+    \end{tabular}
+\end{table} 
+\FloatBarrier
 
 
 Example of using figure 
-\begin{figure}[H]
+\begin{figure}[htbp]
+    \centering
     \includegraphics[width=\textwidth]{images/leopard3.png}
     \caption{A figure caption is always placed below the illustration.
     Please note that short captions are centered, while long ones are
     justified by the macro package automatically.} \label{fig1}
 \end{figure}
+\FloatBarrier
+
+Example of using figure 2 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=4cm]{images/leopard3.png}
+    \caption{A figure caption is always placed below the illustration.
+    Please note that short captions are centered, while long ones are
+    justified by the macro package automatically.} \label{fig2}
+\end{figure}
+\FloatBarrier
 
 Example of using equation 
 \begin{equation}
@@ -64,5 +103,21 @@ Example of using algorithm
     \EndProcedure
     \end{algorithmic}
 \end{algorithm}
+
+
+Example of include program 
+\lstinputlisting[
+language=C++,
+caption={Program test waktu.},
+label={lst:test}
+]{programs/time_test.cpp}
+
+Example of include program 2
+\lstinputlisting[
+language=JavaScript,
+caption={Program JavaScript.},
+label={lst:testJS}
+]{programs/something.js}
+
 
 Example of using citation \cite{ref_url1}.
